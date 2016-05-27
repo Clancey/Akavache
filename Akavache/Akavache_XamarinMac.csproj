@@ -22,7 +22,7 @@
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\Xamarin.Mac10\</OutputPath>
     <IntermediateOutputPath>obj\Debug\Xamarin.Mac10\</IntermediateOutputPath>
-    <DefineConstants>DEBUG; TRACE; MONO; APPKIT; UNIFIED;XAMARIN_MOBILE;</DefineConstants>
+    <DefineConstants>DEBUG; TRACE; MONO; APPKIT; UNIFIED;__OSX__;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <EnableCodeSigning>false</EnableCodeSigning>
@@ -32,12 +32,13 @@
     <UseSGen>false</UseSGen>
     <UseRefCounting>false</UseRefCounting>
     <Profiling>false</Profiling>
+    <HttpClientHandler>HttpClientHandler</HttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\Xamarin.Mac10\</OutputPath>
     <IntermediateOutputPath>obj\Release\Xamarin.Mac10\</IntermediateOutputPath>
-    <DefineConstants>TRACE; MONO; APPKIT; UNIFIED;XAMARIN_MOBILE</DefineConstants>
+    <DefineConstants>TRACE; MONO; APPKIT; UNIFIED;__OSX__;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <EnableCodeSigning>false</EnableCodeSigning>
@@ -47,6 +48,7 @@
     <UseSGen>false</UseSGen>
     <UseRefCounting>false</UseRefCounting>
     <Profiling>false</Profiling>
+    <HttpClientHandler>HttpClientHandler</HttpClientHandler>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -79,6 +81,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\MediaPlayer\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="SQLitePCL.raw">
+      <HintPath>..\..\MediaPlayer\packages\SQLitePCL.raw_basic.0.7.0\lib\portable-net45+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCL.raw.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
